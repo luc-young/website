@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import styles from "../footer.module.css";
-import FooterLink from "./FooterLink";
+import FooterLink from "./footerLink";
 import { links } from "./footerLinks.data";
 
 export default component$(() => {
