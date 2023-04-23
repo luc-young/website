@@ -8,7 +8,7 @@ type LinkData = {
 export default component$(({ linkUrl, logoSrc }: LinkData) => {
   return (
     <a href={linkUrl} title={`lucjdyoung ${linkUrl}`}>
-      <img src={logoSrc} alt="some file" height="70" width="70" />
+      <img src={logoSrc} alt="some file" height="40" width="40" />
     </a>
   );
 });
