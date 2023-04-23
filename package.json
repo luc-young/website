@@ -1,5 +1,6 @@
 {
-  "name": "my-qwik-basic-starter",
+  "name": "luc-young-website",
+  "version": "1.0.0",
   "description": "App with Routing built-in (recommended)",
   "engines": {
     "node": ">=15.0.0"
@@ -17,7 +18,7 @@
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
-    "start": "vite --open --mode ssr",
+    "start": "vite --open --mode ssr ",
     "qwik": "qwik"
   },
   "devDependencies": {

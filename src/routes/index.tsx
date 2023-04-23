@@ -1,5 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import type { DocumentHead } from "@builder.io/qwik-city";
+import Infobox from "~/components/infobox/infobox";
 
 export default component$(() => {
   return (
@@ -7,7 +8,9 @@ export default component$(() => {
       <div class="section">
         <div class="container topics">
           <div>
-            Have a look at the <a href="/demo/flower">Flower App</a>{" "}
+            <Infobox>
+              Have a look at the <a href="/demo/flower">Flower App</a>{" "}
+            </Infobox>
           </div>
         </div>
       </div>

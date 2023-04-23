@@ -1,0 +1,25 @@
+.textWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+}
+
+.linkWrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.linkWrap img {
+  margin: 0 2rem;
+}
+
+.versionWrap {
+  display: flex;
+  text-align: center;
+}
+
+.spacer {
+  padding: 0 15px;
+}
