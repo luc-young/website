@@ -1,10 +1,14 @@
-import { component$, useVisibleTask$, useStore, useStylesScoped$ } from '@builder.io/qwik';
-import { type DocumentHead, useLocation } from '@builder.io/qwik-city';
-import styles from './flower.css?inline';
+import {
+  component$,
+  useVisibleTask$,
+  useStore,
+  useStylesScoped$,
+} from "@builder.io/qwik";
+import { type DocumentHead } from "@builder.io/qwik-city";
+import styles from "./flower.css?inline";
 
 export default component$(() => {
   useStylesScoped$(styles);
-  const loc = useLocation();
 
   const state = useStore({
     count: 0,
@@ -32,23 +36,28 @@ export default component$(() => {
         />
         <div
           style={{
-            '--state': `${state.count * 0.1}`,
+            "--state": `${state.number * 0.1}`,
           }}
           class={{
             host: true,
-            pride: loc.url.searchParams.get('pride') === 'true',
+            pride: "true",
           }}
         >
           {Array.from({ length: state.number }, (_, i) => (
-            <div
-              key={i}
-              class={{
-                square: true,
-                odd: i % 2 === 0,
-              }}
-              style={{ '--index': `${i + 1}` }}
-            />
-          )).reverse()}
+            <>
+              {console.log(i + Math.random() * 100)}
+              <div
+                key={i}
+                class={{
+                  square: true,
+                }}
+                style={{
+                  "--index": `${i + 1}`,
+                  "--amount": `${i + Math.random() * 500}px`,
+                }}
+              />
+            </>
+          ))}
         </div>
       </div>
     </div>
@@ -56,5 +65,5 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: 'Qwik Flower',
+  title: "Qwik Flower",
 };
