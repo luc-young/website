@@ -25,13 +25,20 @@ export default component$(() => {
 
   return (
     <div class="section">
+      <h1 class="h1">Bubble Sort</h1>
       <div class="container center">
         <input
-          type="range"
+          maxLength={30}
+          minLength={10}
+          type="number"
           value={state.number}
-          max={50}
+          class="input"
           onInput$={(ev) => {
-            state.number = (ev.target as HTMLInputElement).valueAsNumber;
+            if (state.number > 30) {
+              state.number = 30;
+            } else {
+              state.number = (ev.target as HTMLInputElement).valueAsNumber;
+            }
           }}
         />
         <div
@@ -43,20 +50,26 @@ export default component$(() => {
             pride: "true",
           }}
         >
-          {Array.from({ length: state.number }, (_, i) => (
-            <>
-              <div
-                key={i}
-                class={{
-                  square: true,
-                }}
-                style={{
-                  "--index": `${i + 1}`,
-                  "--amount": `${i + Math.random() * 500}px`,
-                }}
-              />
-            </>
-          ))}
+          <table class="table">
+            <tbody>
+              <tr>
+                {Array.from({ length: state.number }, (_, i) => (
+                  <>
+                    <td
+                      key={i}
+                      class={{
+                        square: true,
+                      }}
+                      style={{
+                        "--index": `${i + 1}`,
+                        "--amount": `${i + Math.random() * 480}px`,
+                      }}
+                    />
+                  </>
+                ))}
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

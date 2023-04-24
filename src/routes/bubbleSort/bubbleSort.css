@@ -1,31 +1,47 @@
 .host {
   position: relative;
   display: flex;
-
   justify-content: center;
   --size-step: 10px;
   --center: 12;
-  --left: 0px;
   width: 100%;
   height: 500px;
 
   contain: strict;
 }
 
-.input {
+.h1 {
   width: 100%;
+  display: flex;
+  align-content: center;
+  margin: 0;
+  justify-content: center;
+}
+
+.input {
+  width: 20%;
+  margin-bottom: 2rem;
+  padding: 1.2rem;
+}
+
+.table {
+  width: 100%;
+  border-radius: 1.2rem;
+  background-color: white;
 }
 
 .square {
   --size: 20px;
-  bootm: 0;
+  bottom: 0;
+  left: 0;
+  margin-left: 2rem;
   position: absolute;
   display: block;
   width: var(--size);
   height: var(--amount);
-  transform: translate(calc(var(--index) * (var(--left) + var(--size-step))));
+  transform: translate(calc(var(--index) * (var(--size) + var(--size-step))));
   transition-property: transform, border-color;
-  transition-duration: 5s;
+  transition-duration: 1s;
   transition-timing-function: ease-in-out;
   background: white;
   border: 1px solid black;
@@ -35,7 +51,7 @@
 }
 
 .pride .square:nth-child(n) {
-  background: #130202;
+  background: #87aece;
 }
 
 .pride .square:nth-child(2n) {
