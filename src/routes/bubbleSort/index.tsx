@@ -5,7 +5,7 @@ import {
   useStylesScoped$,
 } from "@builder.io/qwik";
 import { type DocumentHead } from "@builder.io/qwik-city";
-import styles from "./flower.css?inline";
+import styles from "./bubbleSort.css?inline";
 
 export default component$(() => {
   useStylesScoped$(styles);
@@ -45,7 +45,6 @@ export default component$(() => {
         >
           {Array.from({ length: state.number }, (_, i) => (
             <>
-              {console.log(i + Math.random() * 100)}
               <div
                 key={i}
                 class={{
@@ -65,5 +64,5 @@ export default component$(() => {
 });
 
 export const head: DocumentHead = {
-  title: "Qwik Flower",
+  title: "Bubble Sort",
 };
