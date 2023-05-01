@@ -4,17 +4,15 @@ import Infobox from "~/components/infobox/infobox";
 
 export default component$(() => {
   return (
-    <>
-      <div class="section">
-        <div class="container topics">
-          <div>
-            <Infobox>
-              Have a look at the <a href="bubbleSort">Bubble Sorter</a>
-            </Infobox>
-          </div>
-        </div>
+    <div class="bg-gray-400 py-1 px-4 ">
+      <hr class="default-hr" />
+      <div>
+        <Infobox>
+          Have a look at the <a href="bubbleSort">Bubble Sorter</a>
+        </Infobox>
       </div>
-    </>
+      <hr class="default-hr" />
+    </div>
   );
 });
 

@@ -15,13 +15,11 @@ export default component$(() => {
     <div class="page">
       <main>
         <Header />
+
         <Slot />
       </main>
-      <div class="section dark">
-        <div class="container">
-          <Footer />
-        </div>
-      </div>
+
+      <Footer />
     </div>
   );
 });

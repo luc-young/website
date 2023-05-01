@@ -6,14 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/**
- * WHAT IS THIS FILE?
- *
- * Globally applied styles. No matter which components are in the page or matching route,
- * the styles in here will be applied to the Document, without any sort of CSS scoping.
- *
- */
-
 :root {
   --background-color: #f0f0f0;
   --box-color: #7ec236;
@@ -25,4 +17,20 @@ body {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     sans-serif;
   margin: 0;
+  background-color: rgba(185, 182, 182, 0.486);
+}
+
+.default-hr {
+  mask-image: linear-gradient(to right, transparent, black, transparent);
+  width: 100%;
+}
+
+.section.dark {
+  background: var(--dark-background);
+}
+
+.page {
+  width: 96vw;
+  margin: 0 auto;
+  overflow: hidden;
 }
