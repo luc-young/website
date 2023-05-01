@@ -1,6 +1,6 @@
 {
   "name": "luc-young-website",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "App with Routing built-in (recommended)",
   "engines": {
     "node": "16.19.0"
