@@ -1,5 +1,5 @@
 import { JSXNode, component$ } from "@builder.io/qwik";
-import styles from "../footer.module.css";
+
 import FooterLink from "./footerLink";
 import { links } from "./footerLinks.data";
 
@@ -15,5 +15,9 @@ export default component$(() => {
     return renderedLinks;
   };
 
-  return <div class={styles.linkWrap}>{renderLinks()}</div>;
+  return (
+    <div class="flex justify-evenly items-center bg-gray-500 py-4">
+      {renderLinks()}
+    </div>
+  );
 });
