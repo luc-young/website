@@ -24,7 +24,7 @@ export default component$(() => {
   });
 
   return (
-    <div class="section">
+    <div class="align-center justify-center">
       <h1 class="h1">Bubble Sort</h1>
       <div class="container center">
         <input
@@ -62,7 +62,7 @@ export default component$(() => {
                       }}
                       style={{
                         "--index": `${i + 1}`,
-                        "--amount": `${i + Math.random() * 480}px`,
+                        "--amount": i + Math.random() * 80 + "%",
                       }}
                     />
                   </>
@@ -70,6 +70,7 @@ export default component$(() => {
               </tr>
             </tbody>
           </table>
+          0
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@ import Infobox from "~/components/infobox/infobox";
 
 export default component$(() => {
   return (
-    <div class="bg-gray-400 py-1 px-4 ">
+    <div>
       <hr class="default-hr" />
       <div>
         <Infobox>
